@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #1d2039;
+  --light-purple: #242947;
+  --lighter-purple: #797e9a;
+  --green: #66a663;
+  --white: #fff;
+  --orange: #dbac36;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--purple);
+  margin: 20px;
+  color: var(--white);
+}
+
+header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--light-purple);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap-reverse;
+}
+
+.gameArea {
+  display: flex;
+  background-color: var(--light-purple);
+  border-radius: 20px;
+  flex-grow: 1000;
+  justify-content: center;
+  padding: 20px 0;
+}
+.gameField {
+  display: grid;
+  grid-template-columns: repeat(10, 39px);
+  grid-template-rows: repeat(8, 30px);
+  gap: 6px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: var(--purple);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cell.active {
+  background-color: var(--lighter-purple);
+}
+.cell.flag {
+  background-image: url(./imgs/photo_2024-07-19_21-12-23.jpg);
+  background-size: cover;
+  background-color: var(--green);
+}
+
+.cell.active:not(.flag):hover {
+  opacity: 0.7;
+}
+
+.gameSettings {
+  background-color: var(--light-purple);
+  border-radius: 20px;
+  padding: 40px 20px;
+  flex-grow: 1;
+}
+
+.gameSettings h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-bottom: 40px;
+}
+.point {
+  flex-basis: 150px;
+  flex-grow: 1;
+  background-color: var(--purple);
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 20px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.point.active {
+  background-color: var(--orange);
+}
+
+.input {
+  display: none;
+}
+
+#gameBtn {
+  color: var(--white);
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 40px;
+  background-color: var(--green);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.5;
+
+}
