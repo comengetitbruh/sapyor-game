@@ -130,3 +130,51 @@ main {
   opacity: 0.5;
 
 }
+
+.exit {
+  color: var(--lighter-purple);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.exit:hover {
+  color: var(--white);
+}
+
+.launch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launchForm{
+  background-color: var(--light-purple);
+  border: 5px solid var(--white);
+  border-radius: 20px;
+  padding: 20px 20px;
+}
+
+.launch h2 {
+  text-align: center;
+}
+
+.launchForm input{
+  margin-top: 15px;
+  background-color: var(--lighter-purple);
+  color: var(--purple);
+  outline: 0;
+  width: 100%;
+  font-size: 24px;
+  border: radius 5px;
+  padding: 5px;
+}
+
+.launch.disabled {
+  display: none;
+}
